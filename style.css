@@ -16,17 +16,19 @@ body {
   grid-template-columns: clamp(300px, 50%, 350px) 1fr;
 }
 
+.filter-white {
+  filter: invert(100%) sepia(0%) saturate(898%) hue-rotate(19deg) brightness(114%) contrast(100%);
+}
+
+/* SIDEBAR STYLING */
+
 .sidebar {
   display: grid;
-  grid-template-columns: auto auto;
   padding-left: 20px;
   gap: 30px 0px;
   grid-template-rows: 100px 1fr;
   background-color: rgb(59, 59, 243);
 }
-
-/* Try to use grid-template-areas to put all sidebar img on one side,
-   sidebar links on other side */
 
 .sidebar img {
   width: 30px;
@@ -36,72 +38,36 @@ body {
   width: 60px;
 }
 
-.filter-white {
-  filter: invert(100%) sepia(0%) saturate(898%) hue-rotate(19deg) brightness(114%) contrast(100%);
-}
-
 .dash-section {
   display: grid;
 }
 
-.dash-section a {
+.dash-section a,
+.group-one a,
+.group-two a {
   display: grid;
   grid-template-columns: 70px;
   grid-auto-flow: column;
   align-items: center;
 }
 
-/* 
-.dash-section span {
-  grid-column: 2;
-} */
-
-/* .dash-section a {
-  grid-column: 2;
-} */
-
-/* .dash-section {
-  grid-column: 2;
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-} */
-
 .links {
-  /* grid-column: 2; */
-  grid-row: 2;
   display: grid;
-  grid-template-rows: min-content min-content;
-  /* align-items: start; */
-  /* grid-template-columns: auto auto; */
+  grid-template-rows: repeat(2, min-content);
+  gap: 70px;
 }
 
 .links .group-one,
 .links .group-two {
   display: grid;
-  gap: 20px;
+  gap: 30px;
   font-weight: bold;
 }
 
-.links .group-one {
-  margin-bottom: 70px;
+.group-one img,
+.group-two img {
+  justify-self: center;
 }
-
-.group-one li {
-  display: grid;
-  grid-template-columns: min-content min-content;
-}
-
-.group-one li a {
-  grid-column: 2;
-}
-
-/* .links li {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-} */
 
 .sidebar ul,
 .dash-section {
@@ -114,14 +80,12 @@ body {
   color: white;
 }
 
-/* .dash-section svg {
-  width: 75px;
-} */
-
 .dash-section a {
   font-size: 2rem;
   font-weight: bold;
 }
+
+/* HEADER STYLING */
 
 .header {
   display: grid;
